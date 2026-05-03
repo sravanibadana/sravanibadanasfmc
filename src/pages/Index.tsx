@@ -19,50 +19,48 @@ export default function Index() {
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden min-h-[100svh] flex items-center">
         <div className="absolute inset-0 grain pointer-events-none" />
-        <div className="absolute -top-32 -right-32 w-[28rem] h-[28rem] bg-lime/40 animate-blob animate-float" />
-        <div className="absolute top-40 -left-24 w-72 h-72 bg-coral/40 animate-blob" style={{ animationDelay: "2s" }} />
+        <div className="absolute -top-24 -right-24 w-80 h-80 bg-lime/40 animate-blob animate-float" />
+        <div className="absolute bottom-10 -left-20 w-64 h-64 bg-coral/40 animate-blob" style={{ animationDelay: "2s" }} />
+        <div className="absolute top-1/3 right-1/4 w-3 h-3 rounded-full bg-cobalt animate-float" />
+        <div className="absolute bottom-1/4 right-10 w-4 h-4 rotate-45 bg-coral animate-float" style={{ animationDelay: "1s" }} />
 
-        <div className="container relative pt-16 md:pt-24 pb-24">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border-2 border-ink bg-cream pop-shadow-sm font-mono-display text-xs uppercase tracking-wider mb-8">
-            <span className="w-2 h-2 rounded-full bg-coral animate-pulse" />
-            Available · Australia · Marketing Cloud Specialist
+        <div className="container relative py-20">
+          <div className="max-w-4xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border-2 border-ink bg-cream pop-shadow-sm font-mono-display text-[10px] md:text-xs uppercase tracking-wider mb-6">
+              <span className="w-2 h-2 rounded-full bg-coral animate-pulse" />
+              Available · Australia · Marketing Cloud
+            </div>
+
+            <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight">
+              Turning <span className="relative inline-block">
+                <span className="relative z-10">data</span>
+                <span className="absolute inset-x-0 bottom-1 h-3 md:h-4 bg-lime -z-0" />
+              </span> into{" "}
+              <span className="italic font-serif text-coral">journeys</span>
+              <span className="block mt-1">that people <span className="underline decoration-cobalt decoration-[3px] underline-offset-4">actually</span> engage with.</span>
+            </h1>
+
+            <p className="mt-6 text-base md:text-lg text-ink/70 max-w-xl leading-relaxed">
+              Salesforce Marketing Cloud Email Specialist exploring lifecycle, automation, and how small optimizations drive big impact.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                to="/projects"
+                className="group inline-flex items-center gap-2 px-5 py-3 rounded-full bg-ink text-cream font-semibold border-2 border-ink pop-shadow-sm hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_0_hsl(var(--lime))] transition-all text-sm"
+              >
+                View Projects <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-cream border-2 border-ink font-semibold pop-shadow-sm hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_0_hsl(var(--coral))] transition-all text-sm"
+              >
+                <Mail className="w-4 h-4" /> Contact
+              </Link>
+            </div>
           </div>
-
-          <h1 className="font-display font-black text-7xl md:text-9xl lg:text-[11rem] leading-[0.85] tracking-tighter max-w-6xl">
-            I design{" "}
-            <span className="relative inline-block">
-              <span className="relative z-10">data-driven</span>
-              <span className="absolute inset-x-0 bottom-3 h-6 md:h-8 bg-lime -z-0" />
-            </span>{" "}
-            <span className="block">customer journeys</span>
-            <span className="block">
-              that <span className="text-coral italic font-black">actually</span>{" "}
-              <span className="inline-block hover:rotate-2 transition-transform">move</span>{" "}
-              <span className="bg-cobalt text-cream px-3 inline-block -rotate-1">metrics.</span>
-            </span>
-          </h1>
-
-          <p className="mt-10 text-xl md:text-2xl text-ink/70 max-w-2xl font-medium">
-            I'm <strong className="text-ink">Sravani Badana</strong> — a Salesforce Marketing Cloud Email Specialist who treats automation like product engineering. Reliability mindset. Creative output.
-          </p>
-
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Link
-              to="/projects"
-              className="group inline-flex items-center gap-2 px-6 py-4 rounded-full bg-ink text-cream font-semibold border-2 border-ink pop-shadow hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[10px_10px_0_0_hsl(var(--lime))] transition-all"
-            >
-              View Projects <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 px-6 py-4 rounded-full bg-cream border-2 border-ink font-semibold pop-shadow hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[10px_10px_0_0_hsl(var(--coral))] transition-all"
-            >
-              <Mail className="w-4 h-4" /> Contact Me
-            </Link>
-          </div>
-
         </div>
       </section>
 
