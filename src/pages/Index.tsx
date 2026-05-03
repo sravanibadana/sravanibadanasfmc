@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Mail, Sparkles, Zap, Database, GitBranch, Workflow, BarChart3 } from "lucide-react";
+import { ArrowRight, Mail, Sparkles, Zap, Database, GitBranch, Workflow, BarChart3, Palette, BookOpen, Camera, Search, Video } from "lucide-react";
 import { projects, featuredSlugs, categories } from "@/data/projects";
 
 const skills = [
@@ -30,16 +30,22 @@ export default function Index() {
             Available · Australia · Marketing Cloud Specialist
           </div>
 
-          <h1 className="font-display font-bold text-5xl md:text-7xl lg:text-8xl leading-[0.95] max-w-5xl">
-            I design <span className="relative inline-block">
+          <h1 className="font-display font-black text-7xl md:text-9xl lg:text-[11rem] leading-[0.85] tracking-tighter max-w-6xl">
+            I design{" "}
+            <span className="relative inline-block">
               <span className="relative z-10">data-driven</span>
-              <span className="absolute inset-x-0 bottom-2 h-4 bg-lime -z-0" />
+              <span className="absolute inset-x-0 bottom-3 h-6 md:h-8 bg-lime -z-0" />
             </span>{" "}
-            customer journeys that <span className="text-coral italic">actually</span> move metrics.
+            <span className="block">customer journeys</span>
+            <span className="block">
+              that <span className="text-coral italic font-black">actually</span>{" "}
+              <span className="inline-block hover:rotate-2 transition-transform">move</span>{" "}
+              <span className="bg-cobalt text-cream px-3 inline-block -rotate-1">metrics.</span>
+            </span>
           </h1>
 
-          <p className="mt-8 text-lg md:text-xl text-ink/70 max-w-2xl">
-            I'm <strong className="text-ink">Sravani Badana</strong> — a Salesforce Marketing Cloud Email Specialist who treats automation like product engineering. I came up running 10,000+ servers; I bring that reliability mindset to every campaign I ship.
+          <p className="mt-10 text-xl md:text-2xl text-ink/70 max-w-2xl font-medium">
+            I'm <strong className="text-ink">Sravani Badana</strong> — a Salesforce Marketing Cloud Email Specialist who treats automation like product engineering. Reliability mindset. Creative output.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
@@ -57,20 +63,6 @@ export default function Index() {
             </Link>
           </div>
 
-          {/* Mini stats */}
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { v: "10,000+", l: "Servers automated at DXC" },
-              { v: "12", l: "Audience DEs refreshed nightly" },
-              { v: "+5.6pts", l: "Open rate lift via A/B" },
-              { v: "97.4%", l: "Inbox placement restored" },
-            ].map((s) => (
-              <div key={s.l} className="border-l-4 border-ink pl-4">
-                <div className="font-display font-bold text-3xl">{s.v}</div>
-                <div className="text-sm text-ink/60 mt-1">{s.l}</div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -92,46 +84,66 @@ export default function Index() {
 
       {/* ABOUT PREVIEW */}
       <section className="container py-24">
-        <div className="grid md:grid-cols-2 gap-12 items-start">
-          <div>
-            <span className="font-mono-display text-xs uppercase tracking-wider text-coral">// About</span>
-            <h2 className="font-display font-bold text-4xl md:text-5xl mt-3">
-              From <span className="line-through text-ink/40">servers</span> to <span className="text-coral">subscribers</span>.
-            </h2>
-          </div>
-          <div className="space-y-4 text-lg text-ink/70">
-            <p>
-              I spent two years at <strong className="text-ink">DXC Technology</strong> keeping global infrastructure reliable for enterprise clients. Then I followed the data — into Marketing Cloud, where the same systems thinking unlocks customer engagement instead of server uptime.
+        <span className="font-mono-display text-xs uppercase tracking-wider text-coral">// About</span>
+        <h2 className="font-display font-black text-5xl md:text-7xl lg:text-8xl mt-3 leading-[0.9] tracking-tighter">
+          From <span className="relative inline-block">
+            <span className="line-through decoration-coral decoration-[6px] text-ink/40">servers</span>
+          </span>{" "}
+          <span className="inline-block animate-float">→</span>{" "}
+          <span className="bg-coral text-cream px-3 inline-block -rotate-1">subscribers.</span>
+        </h2>
+
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          <div className="md:col-span-2 rounded-3xl border-2 border-ink bg-cream p-8 pop-shadow-sm">
+            <p className="text-lg md:text-xl text-ink/80 leading-relaxed">
+              I spent two years at <strong>DXC Technology</strong> keeping global infrastructure reliable for enterprise clients. Then I followed the data — into Marketing Cloud, where the same systems thinking unlocks customer engagement instead of server uptime.
             </p>
-            <p>
-              Today I build journeys, write SQL, and ship campaigns. Tomorrow, Data Cloud.
+            <p className="mt-4 text-lg md:text-xl text-ink/80 leading-relaxed">
+              Today I build journeys, write SQL, and ship campaigns. Tomorrow, <span className="bg-lime px-1">Data Cloud</span>.
             </p>
-            <Link to="/about" className="inline-flex items-center gap-2 font-semibold underline underline-offset-4 hover:text-coral transition-colors">
+            <Link to="/about" className="mt-6 inline-flex items-center gap-2 font-semibold underline underline-offset-4 hover:text-coral transition-colors">
               Read the full story <ArrowRight className="w-4 h-4" />
             </Link>
+          </div>
+          <div className="rounded-3xl border-2 border-ink bg-lime p-8 pop-shadow-sm flex flex-col justify-between">
+            <div className="font-mono-display text-xs uppercase tracking-wider">Quick stats</div>
+            <div>
+              <div className="font-display font-black text-5xl">2 yrs</div>
+              <div className="text-sm font-medium mt-1">enterprise infrastructure</div>
+            </div>
+            <div>
+              <div className="font-display font-black text-5xl">+5.6pts</div>
+              <div className="text-sm font-medium mt-1">open-rate lift via A/B</div>
+            </div>
+            <div>
+              <div className="font-display font-black text-5xl">97.4%</div>
+              <div className="text-sm font-medium mt-1">inbox placement restored</div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* SKILLS */}
-      <section className="bg-secondary border-y-2 border-ink py-24">
-        <div className="container">
+      <section className="bg-ink text-cream border-y-2 border-ink py-24 relative overflow-hidden">
+        <div className="absolute -top-20 -right-20 w-80 h-80 bg-lime/20 animate-blob" />
+        <div className="absolute -bottom-32 -left-20 w-96 h-96 bg-coral/20 animate-blob" style={{ animationDelay: "3s" }} />
+        <div className="container relative">
           <div className="flex items-end justify-between flex-wrap gap-4 mb-12">
             <div>
-              <span className="font-mono-display text-xs uppercase tracking-wider text-cobalt">// Stack</span>
-              <h2 className="font-display font-bold text-4xl md:text-5xl mt-3">The toolkit.</h2>
+              <span className="font-mono-display text-xs uppercase tracking-wider text-lime">// Stack</span>
+              <h2 className="font-display font-black text-5xl md:text-7xl mt-3 tracking-tighter">The <span className="text-lime">toolkit.</span></h2>
             </div>
-            <p className="text-ink/60 max-w-md">Levels reflect production confidence, not certifications. I learn fast and ship faster.</p>
+            <p className="text-cream/60 max-w-md">Levels reflect production confidence, not certifications. I learn fast and ship faster.</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {skills.map((s) => (
-              <div key={s.name} className="bg-cream border-2 border-ink rounded-2xl p-5 pop-shadow-sm">
+              <div key={s.name} className="bg-cream/5 backdrop-blur border-2 border-cream/20 rounded-2xl p-5 hover:border-lime transition-colors">
                 <div className="flex justify-between items-baseline mb-3">
                   <span className="font-display font-bold text-lg">{s.name}</span>
-                  <span className="font-mono-display text-sm text-ink/60">{s.level}%</span>
+                  <span className="font-mono-display text-sm text-cream/60">{s.level}%</span>
                 </div>
-                <div className="h-3 bg-ink/10 rounded-full overflow-hidden">
+                <div className="h-3 bg-cream/10 rounded-full overflow-hidden">
                   <div className={`h-full ${s.color} rounded-full transition-all duration-700`} style={{ width: `${s.level}%` }} />
                 </div>
               </div>
@@ -140,7 +152,7 @@ export default function Index() {
 
           <div className="mt-10 flex flex-wrap gap-2">
             {["Email Studio", "Journey Builder", "Automation Studio", "Contact Builder", "Content Builder", "Data Extensions", "AMPscript", "SSJS", "SQL", "REST API", "SOAP API", "HTML/CSS Email", "Google Analytics", "CM360", "GDPR", "CAN-SPAM"].map((t) => (
-              <span key={t} className="px-3 py-1.5 rounded-full bg-cream border border-ink/20 text-sm font-medium hover:bg-lime hover:border-ink transition-colors">{t}</span>
+              <span key={t} className="px-3 py-1.5 rounded-full bg-cream/5 border border-cream/20 text-sm font-medium hover:bg-lime hover:text-ink hover:border-lime transition-colors">{t}</span>
             ))}
           </div>
         </div>
@@ -216,6 +228,35 @@ export default function Index() {
                 </div>
               </div>
             </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* BEYOND WORK */}
+      <section className="container py-24">
+        <span className="font-mono-display text-xs uppercase tracking-wider text-cobalt">// Off the clock</span>
+        <h2 className="font-display font-black text-5xl md:text-7xl mt-3 tracking-tighter leading-[0.9]">
+          Beyond <span className="bg-lime px-2 inline-block -rotate-1">work.</span>
+        </h2>
+        <p className="mt-6 max-w-2xl text-lg text-ink/70">
+          When I'm not building customer journeys, I spend time exploring creativity and ideas that shape how I think about people, behaviour, and storytelling.
+        </p>
+
+        <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {[
+            { icon: Palette, emoji: "🎨", title: "Painting", color: "bg-coral", text: "I enjoy painting as a way to slow down and focus on detail. It strengthens my visual thinking, which reflects in how I design clean, structured, and engaging email experiences." },
+            { icon: BookOpen, emoji: "✍️", title: "Journaling", color: "bg-lime", text: "Journaling helps me organise my thoughts and reflect on patterns, ideas, and experiences. It has improved how I think through problems, structure strategies, and communicate clearly — especially when planning customer journeys and campaign flows." },
+            { icon: Camera, emoji: "📸", title: "Photography", color: "bg-cobalt text-cream", text: "I enjoy capturing everyday moments and visual compositions through photography. It sharpens my eye for detail, layout, and storytelling, which influences how I approach visual hierarchy and design in emails." },
+            { icon: Search, emoji: "🧠", title: "Research & Trend Exploration", color: "bg-lime", text: "I regularly analyse brand campaigns, funnels, and digital experiences to understand what drives engagement. This habit helps me continuously refine how I approach segmentation, messaging, and lifecycle marketing." },
+            { icon: Video, emoji: "🎥", title: "Content Creation", color: "bg-coral", text: "I create content around marketing, storytelling, and consumer behaviour. It allows me to break down complex ideas into simple, engaging narratives — something I apply when designing campaigns and customer experiences." },
+          ].map((h) => (
+            <div key={h.title} className="rounded-3xl border-2 border-ink bg-cream p-6 pop-shadow-sm hover:-translate-y-1 hover:pop-shadow transition-all">
+              <div className={`w-14 h-14 grid place-items-center rounded-2xl ${h.color} border-2 border-ink text-2xl mb-4`}>
+                {h.emoji}
+              </div>
+              <h3 className="font-display font-bold text-xl mb-2">{h.title}</h3>
+              <p className="text-sm text-ink/70 leading-relaxed">{h.text}</p>
+            </div>
           ))}
         </div>
       </section>
