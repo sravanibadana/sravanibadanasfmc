@@ -20,11 +20,21 @@ export default function Index() {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden min-h-[100svh] flex items-center">
-        <div className="absolute inset-0 grain pointer-events-none" />
-        <div className="absolute -top-24 -right-24 w-80 h-80 bg-lime/40 animate-blob animate-float" />
-        <div className="absolute bottom-10 -left-20 w-64 h-64 bg-coral/40 animate-blob" style={{ animationDelay: "2s" }} />
-        <div className="absolute top-1/3 right-1/4 w-3 h-3 rounded-full bg-cobalt animate-float" />
-        <div className="absolute bottom-1/4 right-10 w-4 h-4 rotate-45 bg-coral animate-float" style={{ animationDelay: "1s" }} />
+        {/* Mesh gradient base */}
+        <div className="absolute inset-0 mesh-hero pointer-events-none" />
+        {/* Soft blobs */}
+        <div className="absolute -top-32 -right-24 w-[28rem] h-[28rem] bg-lime/40 blur-3xl animate-blob animate-float pointer-events-none" />
+        <div className="absolute -bottom-24 -left-24 w-[26rem] h-[26rem] bg-coral/30 blur-3xl animate-blob pointer-events-none" style={{ animationDelay: "2s" }} />
+        <div className="absolute top-1/2 left-1/3 w-72 h-72 bg-cobalt/20 blur-3xl rounded-full pointer-events-none" />
+        {/* Grain overlay for texture */}
+        <div className="absolute inset-0 grain opacity-60 pointer-events-none" />
+        {/* Abstract shapes */}
+        <div className="absolute top-24 right-12 w-3 h-3 rounded-full bg-cobalt animate-float pointer-events-none" />
+        <div className="absolute bottom-24 right-24 w-4 h-4 rotate-45 bg-coral animate-float pointer-events-none" style={{ animationDelay: "1s" }} />
+        <div className="absolute top-1/3 left-10 w-6 h-6 border-2 border-ink rounded-full animate-float pointer-events-none" style={{ animationDelay: "1.4s" }} />
+        <svg className="absolute bottom-16 left-1/4 w-10 h-10 text-ink/70 animate-float pointer-events-none" style={{ animationDelay: "0.6s" }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" />
+        </svg>
 
         <div className="container relative py-20">
           <div className="max-w-4xl">

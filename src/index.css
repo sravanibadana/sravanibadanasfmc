@@ -41,7 +41,7 @@ All colors MUST be HSL.
 
     /* Brand accents */
     --lime: 75 95% 60%;
-    --coral: 12 95% 64%;
+    --coral: 358 72% 54%;
     --cobalt: 232 88% 58%;
     --plum: 280 60% 30%;
     --ink: 230 25% 10%;
@@ -146,6 +146,13 @@ All colors MUST be HSL.
   .grain {
     background-image: radial-gradient(hsl(var(--ink) / 0.06) 1px, transparent 1px);
     background-size: 16px 16px;
+  }
+  .mesh-hero {
+    background-image:
+      radial-gradient(at 18% 22%, hsl(var(--lime) / 0.55) 0px, transparent 45%),
+      radial-gradient(at 82% 18%, hsl(var(--coral) / 0.45) 0px, transparent 50%),
+      radial-gradient(at 70% 85%, hsl(var(--cobalt) / 0.35) 0px, transparent 55%),
+      radial-gradient(at 25% 80%, hsl(var(--lime) / 0.30) 0px, transparent 50%);
   }
   .marquee {
     animation: marquee 30s linear infinite;
