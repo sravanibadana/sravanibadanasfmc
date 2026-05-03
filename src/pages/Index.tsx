@@ -91,8 +91,8 @@ export default function Index() {
           <span className="bg-coral text-cream px-3 inline-block -rotate-1">subscribers.</span>
         </h2>
 
-        <div className="mt-12 grid md:grid-cols-3 gap-6">
-          <div className="md:col-span-2 rounded-3xl border-2 border-ink bg-cream p-8 pop-shadow-sm">
+        <div className="mt-12">
+          <div className="rounded-3xl border-2 border-ink bg-cream p-8 pop-shadow-sm max-w-3xl">
             <p className="text-lg md:text-xl text-ink/80 leading-relaxed">
               I spent two years at <strong>DXC Technology</strong> keeping global infrastructure reliable for enterprise clients. Then I followed the data — into Marketing Cloud, where the same systems thinking unlocks customer engagement instead of server uptime.
             </p>
@@ -102,21 +102,6 @@ export default function Index() {
             <Link to="/about" className="mt-6 inline-flex items-center gap-2 font-semibold underline underline-offset-4 hover:text-coral transition-colors">
               Read the full story <ArrowRight className="w-4 h-4" />
             </Link>
-          </div>
-          <div className="rounded-3xl border-2 border-ink bg-lime p-8 pop-shadow-sm flex flex-col justify-between">
-            <div className="font-mono-display text-xs uppercase tracking-wider">Quick stats</div>
-            <div>
-              <div className="font-display font-black text-5xl">2 yrs</div>
-              <div className="text-sm font-medium mt-1">enterprise infrastructure</div>
-            </div>
-            <div>
-              <div className="font-display font-black text-5xl">+5.6pts</div>
-              <div className="text-sm font-medium mt-1">open-rate lift via A/B</div>
-            </div>
-            <div>
-              <div className="font-display font-black text-5xl">97.4%</div>
-              <div className="text-sm font-medium mt-1">inbox placement restored</div>
-            </div>
           </div>
         </div>
       </section>
