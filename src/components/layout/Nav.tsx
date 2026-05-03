@@ -1,6 +1,6 @@
 import { NavLink, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X, Sparkles, Linkedin } from "lucide-react";
 
 const links = [
   { to: "/", label: "Home" },
@@ -56,14 +56,25 @@ export default function Nav() {
           ))}
         </nav>
 
-        <a
-          href="/SravaniBadana-Resume.pdf"
-          download
-          className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-lime text-ink font-semibold text-sm border-2 border-ink pop-shadow-sm hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_0_hsl(var(--ink))] transition-all"
-        >
-          <Sparkles className="w-4 h-4" />
-          Resume
-        </a>
+        <div className="hidden md:flex items-center gap-2">
+          <a
+            href="https://www.linkedin.com/in/sravani-badana/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cobalt text-cream font-semibold text-sm border-2 border-ink pop-shadow-sm hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_0_hsl(var(--ink))] transition-all"
+          >
+            <Linkedin className="w-4 h-4" />
+            LinkedIn
+          </a>
+          <a
+            href="/SravaniBadana-Resume.pdf"
+            download
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-lime text-ink font-semibold text-sm border-2 border-ink pop-shadow-sm hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_0_hsl(var(--ink))] transition-all"
+          >
+            <Sparkles className="w-4 h-4" />
+            Resume
+          </a>
+        </div>
 
         <button
           className="md:hidden p-2 rounded-full bg-ink text-cream"
@@ -98,6 +109,14 @@ export default function Nav() {
               className="mt-2 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-lime text-ink font-semibold border-2 border-ink"
             >
               <Sparkles className="w-4 h-4" /> Download Resume
+            </a>
+            <a
+              href="https://www.linkedin.com/in/sravani-badana/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-cobalt text-cream font-semibold border-2 border-ink"
+            >
+              <Linkedin className="w-4 h-4" /> LinkedIn
             </a>
           </div>
         </div>
