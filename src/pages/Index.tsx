@@ -19,153 +19,56 @@ export default function Index() {
   return (
     <>
       {/* HERO */}
-      <section className="px-4 md:px-6 pt-6 pb-10">
-        <div
-          className="relative overflow-hidden border-2 mx-auto"
-          style={{
-            background: "#fff9f0",
-            borderColor: "#111",
-            borderRadius: "28px",
-            minHeight: "min(86svh, 760px)",
-          }}
-        >
-          {/* Decorative SVGs */}
-          {/* Top-left dashed squiggle with pink echo */}
-          <svg className="absolute top-6 left-6 w-40 h-12 pointer-events-none" viewBox="0 0 160 40" fill="none">
-            <path d="M2 20 Q 20 2, 40 20 T 80 20 T 120 20 T 158 20" stroke="#f8c2d4" strokeWidth="3" strokeDasharray="6 5" strokeLinecap="round" transform="translate(2 4)" />
-            <path d="M2 20 Q 20 2, 40 20 T 80 20 T 120 20 T 158 20" stroke="#111" strokeWidth="2" strokeDasharray="6 5" strokeLinecap="round" />
-          </svg>
+      <section className="relative overflow-hidden min-h-[100svh] flex items-center">
+        {/* Mesh gradient base */}
+        <div className="absolute inset-0 mesh-hero pointer-events-none" />
+        {/* Soft blobs */}
+        <div className="absolute -top-32 -right-24 w-[28rem] h-[28rem] bg-lime/40 blur-3xl animate-blob animate-float pointer-events-none" />
+        <div className="absolute -bottom-24 -left-24 w-[26rem] h-[26rem] bg-coral/30 blur-3xl animate-blob pointer-events-none" style={{ animationDelay: "2s" }} />
+        <div className="absolute top-1/2 left-1/3 w-72 h-72 bg-cobalt/20 blur-3xl rounded-full pointer-events-none" />
+        {/* Grain overlay for texture */}
+        <div className="absolute inset-0 grain opacity-60 pointer-events-none" />
+        {/* Abstract shapes */}
+        <div className="absolute top-24 right-12 w-3 h-3 rounded-full bg-cobalt animate-float pointer-events-none" />
+        <div className="absolute bottom-24 right-24 w-4 h-4 rotate-45 bg-coral animate-float pointer-events-none" style={{ animationDelay: "1s" }} />
+        <div className="absolute top-1/3 left-10 w-6 h-6 border-2 border-ink rounded-full animate-float pointer-events-none" style={{ animationDelay: "1.4s" }} />
+        <svg className="absolute bottom-16 left-1/4 w-10 h-10 text-ink/70 animate-float pointer-events-none" style={{ animationDelay: "0.6s" }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" />
+        </svg>
 
-          {/* Lime star mid-right */}
-          <svg className="absolute top-1/2 right-10 w-14 h-14 pointer-events-none animate-float" viewBox="0 0 24 24" fill="#c8f135" stroke="#111" strokeWidth="1.5" strokeLinejoin="round">
-            <path d="M12 1.5 L14.2 9.6 L22.5 12 L14.2 14.4 L12 22.5 L9.8 14.4 L1.5 12 L9.8 9.6 Z" />
-          </svg>
-
-          {/* Dashed square bottom-right */}
-          <svg className="absolute bottom-8 right-16 w-16 h-16 pointer-events-none" viewBox="0 0 60 60" fill="none">
-            <rect x="3" y="3" width="54" height="54" rx="8" stroke="#111" strokeWidth="2" strokeDasharray="5 4" />
-          </svg>
-
-          {/* Three colored dots bottom-left */}
-          <div className="absolute bottom-8 left-8 flex items-center gap-2 pointer-events-none">
-            <span className="w-3 h-3 rounded-full" style={{ background: "#ffd166", border: "2px solid #111" }} />
-            <span className="w-3 h-3 rounded-full" style={{ background: "#e0407a", border: "2px solid #111" }} />
-            <span className="w-3 h-3 rounded-full" style={{ background: "#c8f135", border: "2px solid #111" }} />
-          </div>
-
-          {/* Vertical fading dot trail top-center */}
-          <div className="absolute top-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 pointer-events-none">
-            {[0, 1, 2, 3, 4].map((i) => (
-              <span
-                key={i}
-                className="w-1.5 h-1.5 rounded-full bg-[#111] animate-dot-trail"
-                style={{ animationDelay: `${i * 0.15}s`, opacity: 1 - i * 0.18 }}
-              />
-            ))}
-          </div>
-
-          {/* Floating sticky-note tags (right side) */}
-          <div
-            className="hidden md:block absolute top-20 right-12 px-4 py-2 font-nunito font-bold text-sm"
-            style={{ background: "#ffffff", border: "2px solid #111", borderRadius: "10px", transform: "rotate(-4deg)", boxShadow: "3px 3px 0 0 #111" }}
-          >
-            lifecycle ✦
-          </div>
-          <div
-            className="hidden md:block absolute top-44 right-32 px-4 py-2 font-nunito font-bold text-sm"
-            style={{ background: "#ffd166", border: "2px solid #111", borderRadius: "10px", transform: "rotate(5deg)", boxShadow: "3px 3px 0 0 #111" }}
-          >
-            automation
-          </div>
-          <div
-            className="hidden md:block absolute bottom-24 right-28 px-4 py-2 font-nunito font-bold text-sm"
-            style={{ background: "#e0f0ff", border: "2px solid #111", borderRadius: "10px", transform: "rotate(-3deg)", boxShadow: "3px 3px 0 0 #111" }}
-          >
-            email specialist ✉
-          </div>
-
-          {/* CONTENT */}
-          <div className="relative px-6 md:px-14 pt-8 pb-10 md:pt-14 md:pb-16 max-w-6xl">
-            {/* Badge */}
-            <div
-              className="inline-flex items-center gap-2 px-4 py-1.5 text-[11px] md:text-xs font-nunito font-bold uppercase tracking-wider"
-              style={{ background: "#111", color: "#fff", borderRadius: "99px" }}
-            >
-              <span className="w-2 h-2 rounded-full bg-[#c8f135] animate-pulse" />
-              AVAILABLE · AUSTRALIA · MARKETING CLOUD
+        <div className="container relative py-20">
+          <div className="max-w-4xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border-2 border-ink bg-cream pop-shadow-sm font-mono-display text-[10px] md:text-xs uppercase tracking-wider mb-6">
+              <span className="w-2 h-2 rounded-full bg-coral animate-pulse" />
+              Available · Australia · Marketing Cloud
             </div>
 
-            {/* Headline */}
-            <h1 className="mt-7 leading-[1] text-[#111] max-w-3xl">
-              {/* Line 1 */}
-              <span className="flex flex-wrap items-center gap-x-3 gap-y-2">
-                <span className="font-unbounded font-black text-[32px] md:text-[44px]">Turning</span>
-                <span
-                  className="inline-block font-unbounded font-black text-[26px] md:text-[36px] px-3 py-0.5"
-                  style={{ background: "#ffd166", border: "2px solid #111", borderRadius: "12px", transform: "rotate(-2deg)", boxShadow: "3px 3px 0 0 #111" }}
-                >
-                  data
-                </span>
-                <span className="font-unbounded font-black text-[32px] md:text-[44px]">into</span>
-              </span>
-
-              {/* Line 2 */}
-              <span className="block mt-2 md:mt-3 relative">
-                <span
-                  className="font-caveat italic font-bold leading-none"
-                  style={{ color: "#e0407a", fontSize: "clamp(72px, 11vw, 110px)" }}
-                >
-                  journeys
-                </span>
-                <svg
-                  className="inline-block ml-2 -mb-2 animate-wobble-rot"
-                  width="56" height="48" viewBox="0 0 56 48" fill="none"
-                >
-                  <path d="M4 30 Q 18 4, 42 14" stroke="#111" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-                  <path d="M34 8 L 44 14 L 38 24" stroke="#111" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-                </svg>
-              </span>
-
-              {/* Line 3 */}
-              <span className="flex flex-wrap items-center gap-x-3 gap-y-2 mt-3">
-                <span className="font-unbounded font-black text-[24px] md:text-[34px]">that people</span>
-                <span
-                  className="inline-block font-unbounded font-black text-[20px] md:text-[28px] px-3 py-0.5"
-                  style={{ background: "#c8f135", border: "2px solid #3b6d11", borderRadius: "12px", transform: "rotate(1.5deg)", boxShadow: "3px 3px 0 0 #111" }}
-                >
-                  actually
-                </span>
-                <span className="font-unbounded font-black text-[24px] md:text-[34px] relative">
-                  engage with.
-                  <svg className="absolute left-0 -bottom-3 w-full h-3" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none">
-                    <path d="M2 6 Q 15 0, 30 6 T 60 6 T 90 6 T 120 6 T 150 6 T 198 6" stroke="#e0407a" strokeWidth="2.5" strokeDasharray="5 4" strokeLinecap="round" fill="none" />
-                  </svg>
-                </span>
-              </span>
+            <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight">
+              Turning <span className="relative inline-block">
+                <span className="relative z-10">data</span>
+                <span className="absolute inset-x-0 bottom-1 h-3 md:h-4 bg-lime -z-0" />
+              </span> into{" "}
+              <span className="italic font-serif text-coral">journeys</span>
+              <span className="block mt-1">that people <span className="underline decoration-cobalt decoration-[3px] underline-offset-4">actually</span> engage with.</span>
             </h1>
 
-            {/* Bottom row: subtext + buttons */}
-            <div className="mt-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-              <p className="font-nunito font-bold text-[14px] leading-relaxed" style={{ color: "#666", maxWidth: "340px" }}>
-                Salesforce Marketing Cloud Email Specialist exploring lifecycle, automation, and how small optimisations drive big impact.
-              </p>
+            <p className="mt-6 text-base md:text-lg text-ink/70 max-w-xl leading-relaxed">
+              Salesforce Marketing Cloud Email Specialist exploring lifecycle, automation, and how small optimizations drive big impact.
+            </p>
 
-              <div className="flex flex-wrap gap-3">
-                <Link
-                  to="/projects"
-                  className="group inline-flex items-center gap-2 px-6 py-3 font-nunito font-black text-sm transition-transform hover:-translate-y-[3px] hover:-rotate-1"
-                  style={{ background: "#111", color: "#fff", borderRadius: "99px", border: "2px solid #111" }}
-                >
-                  View Projects <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 font-nunito font-black text-sm transition-transform hover:-translate-y-[3px] hover:rotate-1"
-                  style={{ background: "transparent", color: "#111", borderRadius: "99px", border: "2px solid #111" }}
-                >
-                  <Mail className="w-4 h-4" /> Contact
-                </Link>
-              </div>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                to="/projects"
+                className="group inline-flex items-center gap-2 px-5 py-3 rounded-full bg-ink text-cream font-semibold border-2 border-ink pop-shadow-sm hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_0_hsl(var(--lime))] transition-all text-sm"
+              >
+                View Projects <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-cream border-2 border-ink font-semibold pop-shadow-sm hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_0_hsl(var(--coral))] transition-all text-sm"
+              >
+                <Mail className="w-4 h-4" /> Contact
+              </Link>
             </div>
           </div>
         </div>
