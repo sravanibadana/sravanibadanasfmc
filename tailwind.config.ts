@@ -53,11 +53,6 @@ export default {
         plum: "hsl(var(--plum))",
         ink: "hsl(var(--ink))",
         cream: "hsl(var(--cream))",
-        wine: "hsl(var(--wine))",
-        pinkred: "hsl(var(--pinkred))",
-        sun: "hsl(var(--sun))",
-        lavender: "hsl(var(--lavender))",
-        forest: "hsl(var(--forest))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

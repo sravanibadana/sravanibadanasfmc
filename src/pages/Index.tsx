@@ -19,82 +19,53 @@ export default function Index() {
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden min-h-[100svh] flex items-center text-cream">
-        {/* Wine mesh base */}
-        <div className="absolute inset-0 mesh-wine pointer-events-none" />
-        {/* Soft blobs in palette */}
-        <div className="absolute -top-32 -right-24 w-[30rem] h-[30rem] bg-pinkred/40 blur-3xl animate-blob animate-float pointer-events-none" />
-        <div className="absolute -bottom-32 -left-20 w-[26rem] h-[26rem] bg-forest/50 blur-3xl animate-blob pointer-events-none" style={{ animationDelay: "2s" }} />
-        <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-sun/25 blur-3xl rounded-full pointer-events-none" />
-        {/* Grain */}
-        <div className="absolute inset-0 opacity-[0.08] pointer-events-none" style={{ backgroundImage: "radial-gradient(rgba(255,255,255,0.6) 1px, transparent 1px)", backgroundSize: "16px 16px" }} />
+      <section className="relative overflow-hidden min-h-[100svh] flex items-center">
+        {/* Mesh gradient base */}
+        <div className="absolute inset-0 mesh-hero pointer-events-none" />
+        {/* Soft blobs */}
+        <div className="absolute -top-32 -right-24 w-[28rem] h-[28rem] bg-lime/40 blur-3xl animate-blob animate-float pointer-events-none" />
+        <div className="absolute -bottom-24 -left-24 w-[26rem] h-[26rem] bg-coral/30 blur-3xl animate-blob pointer-events-none" style={{ animationDelay: "2s" }} />
+        <div className="absolute top-1/2 left-1/3 w-72 h-72 bg-cobalt/20 blur-3xl rounded-full pointer-events-none" />
+        {/* Grain overlay for texture */}
+        <div className="absolute inset-0 grain opacity-60 pointer-events-none" />
+        {/* Abstract shapes */}
+        <div className="absolute top-24 right-12 w-3 h-3 rounded-full bg-cobalt animate-float pointer-events-none" />
+        <div className="absolute bottom-24 right-24 w-4 h-4 rotate-45 bg-coral animate-float pointer-events-none" style={{ animationDelay: "1s" }} />
+        <div className="absolute top-1/3 left-10 w-6 h-6 border-2 border-ink rounded-full animate-float pointer-events-none" style={{ animationDelay: "1.4s" }} />
+        <svg className="absolute bottom-16 left-1/4 w-10 h-10 text-ink/70 animate-float pointer-events-none" style={{ animationDelay: "0.6s" }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" />
+        </svg>
 
-        {/* Decorative floating shapes — spread across full width */}
-        <div className="absolute top-[14%] right-[8%] w-32 h-32 rounded-full bg-lavender/80 border-2 border-cream/40 animate-float pointer-events-none" />
-        <div className="absolute top-[22%] right-[14%] w-3 h-3 rounded-full bg-sun animate-pulse pointer-events-none" />
-        <svg className="absolute top-[8%] right-[28%] w-14 h-14 text-sun animate-float pointer-events-none" style={{ animationDelay: "0.8s" }} viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 1 L14.5 9.5 L23 12 L14.5 14.5 L12 23 L9.5 14.5 L1 12 L9.5 9.5 Z" stroke="hsl(var(--forest))" strokeWidth="1.5" strokeLinejoin="round" />
-        </svg>
-        <div className="absolute bottom-[18%] right-[10%] w-6 h-6 rotate-45 bg-pinkred border-2 border-cream/40 animate-float pointer-events-none" style={{ animationDelay: "1.2s" }} />
-        <div className="absolute bottom-[28%] right-[28%] w-10 h-10 border-[3px] border-sun rounded-full animate-float pointer-events-none" style={{ animationDelay: "1.6s" }} />
-        {/* Squiggle */}
-        <svg className="absolute bottom-[14%] right-[20%] w-28 h-10 text-sun pointer-events-none" viewBox="0 0 100 20" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
-          <path d="M2 10 Q 12 0, 22 10 T 42 10 T 62 10 T 82 10 T 98 10" />
-        </svg>
-        {/* Big curved arrow */}
-        <svg className="absolute top-[40%] right-[6%] w-20 h-20 text-pinkred animate-float pointer-events-none" style={{ animationDelay: "0.4s" }} viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M8 16 C 28 6, 52 18, 56 44" />
-          <path d="M48 36 L 56 44 L 48 52" />
-        </svg>
-        {/* Tiny stars left side */}
-        <div className="absolute top-[18%] left-[6%] w-2 h-2 rounded-full bg-sun animate-pulse pointer-events-none" />
-        <div className="absolute bottom-[20%] left-[40%] w-2.5 h-2.5 rounded-full bg-lavender pointer-events-none" />
-
-        <div className="container relative py-16 md:py-20">
-          <div className="max-w-[92%] lg:max-w-[88%]">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border-2 border-cream/70 bg-wine/60 backdrop-blur font-mono-display text-[10px] md:text-xs uppercase tracking-wider mb-7">
-              <span className="w-2 h-2 rounded-full bg-lime animate-pulse" />
-              <span className="text-cream">Available · Australia · Marketing Cloud</span>
+        <div className="container relative py-20">
+          <div className="max-w-4xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border-2 border-ink bg-cream pop-shadow-sm font-mono-display text-[10px] md:text-xs uppercase tracking-wider mb-6">
+              <span className="w-2 h-2 rounded-full bg-coral animate-pulse" />
+              Available · Australia · Marketing Cloud
             </div>
 
-            <h1 className="font-display font-black text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] xl:text-[6.5rem] leading-[1.02] tracking-tight text-cream">
-              Turning{" "}
-              <span className="relative inline-block">
-                <span className="relative z-10 bg-sun text-ink px-3 -rotate-2 inline-block border-2 border-ink rounded-md">data</span>
-              </span>{" "}
-              into{" "}
-              <span className="relative inline-block font-serif italic text-pinkred lg:text-[7rem] xl:text-[8.5rem] leading-none">
-                journeys
-                {/* wave underline */}
-                <svg className="absolute -bottom-3 md:-bottom-4 left-0 w-full h-4 md:h-6 text-pinkred" viewBox="0 0 200 16" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" preserveAspectRatio="none">
-                  <path d="M2 8 Q 18 0, 34 8 T 66 8 T 98 8 T 130 8 T 162 8 T 198 8" />
-                </svg>
-                {/* small star accent */}
-                <svg className="absolute -top-4 -right-6 w-7 h-7 text-pinkred" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" />
-                </svg>
-              </span>
-              <span className="block mt-3 md:mt-5">
-                that people{" "}
-                <span className="bg-lime text-ink px-3 inline-block rotate-1 border-2 border-ink rounded-md">actually</span>{" "}
-                engage with.
-              </span>
+            <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight">
+              Turning <span className="relative inline-block">
+                <span className="relative z-10">data</span>
+                <span className="absolute inset-x-0 bottom-1 h-3 md:h-4 bg-lime -z-0" />
+              </span> into{" "}
+              <span className="italic font-serif text-coral">journeys</span>
+              <span className="block mt-1">that people <span className="underline decoration-cobalt decoration-[3px] underline-offset-4">actually</span> engage with.</span>
             </h1>
 
-            <p className="mt-8 text-base md:text-xl text-cream/85 max-w-2xl leading-relaxed">
+            <p className="mt-6 text-base md:text-lg text-ink/70 max-w-xl leading-relaxed">
               Salesforce Marketing Cloud Email Specialist exploring lifecycle, automation, and how small optimizations drive big impact.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 to="/projects"
-                className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-sun text-ink font-semibold border-2 border-ink shadow-[4px_4px_0_0_hsl(var(--ink))] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_0_hsl(var(--ink))] transition-all text-sm"
+                className="group inline-flex items-center gap-2 px-5 py-3 rounded-full bg-ink text-cream font-semibold border-2 border-ink pop-shadow-sm hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_0_hsl(var(--lime))] transition-all text-sm"
               >
                 View Projects <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-cream text-ink border-2 border-ink font-semibold shadow-[4px_4px_0_0_hsl(var(--pinkred))] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_0_hsl(var(--pinkred))] transition-all text-sm"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-cream border-2 border-ink font-semibold pop-shadow-sm hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_0_hsl(var(--coral))] transition-all text-sm"
               >
                 <Mail className="w-4 h-4" /> Contact
               </Link>
