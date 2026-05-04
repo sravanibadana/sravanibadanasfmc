@@ -37,22 +37,22 @@ export default function Index() {
         </svg>
 
         <div className="container relative py-20">
-          <div className="max-w-4xl">
+          <div className="max-w-5xl xl:max-w-6xl">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border-2 border-ink bg-cream pop-shadow-sm font-mono-display text-[10px] md:text-xs uppercase tracking-wider mb-6">
               <span className="w-2 h-2 rounded-full bg-coral animate-pulse" />
               Available · Australia · Marketing Cloud
             </div>
 
-            <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight">
+            <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.05] tracking-tight">
               Turning <span className="relative inline-block">
                 <span className="relative z-10">data</span>
                 <span className="absolute inset-x-0 bottom-1 h-3 md:h-4 bg-lime -z-0" />
               </span> into{" "}
-              <span className="italic font-serif text-coral">journeys</span>
+              <span className="italic font-serif text-[hsl(0,90%,50%)] text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">journeys</span>
               <span className="block mt-1">that people <span className="underline decoration-cobalt decoration-[3px] underline-offset-4">actually</span> engage with.</span>
             </h1>
 
-            <p className="mt-6 text-base md:text-lg text-ink/70 max-w-xl leading-relaxed">
+            <p className="mt-6 text-base md:text-lg text-ink/70 max-w-2xl leading-relaxed">
               Salesforce Marketing Cloud Email Specialist exploring lifecycle, automation, and how small optimizations drive big impact.
             </p>
 
