@@ -93,16 +93,16 @@ export default function Index() {
       {/* ABOUT PREVIEW */}
       <section className="container py-24">
         <span className="font-mono-display text-xs uppercase tracking-wider text-coral">// About</span>
-        <h2 className="font-display font-black text-5xl md:text-7xl lg:text-8xl mt-3 leading-[0.9] tracking-tighter">
-          From <span className="relative inline-block">
-            <span className="line-through decoration-coral decoration-[6px] text-ink/40">servers</span>
-          </span>{" "}
-          <span className="inline-block animate-float">→</span>{" "}
-          <span className="bg-coral text-cream px-3 inline-block -rotate-1">subscribers.</span>
-        </h2>
+        <div className="mt-3 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <h2 className="font-display font-black text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tighter">
+            From <span className="relative inline-block">
+              <span className="line-through decoration-coral decoration-[6px] text-ink/40">servers</span>
+            </span>{" "}
+            <span className="inline-block animate-float">→</span>{" "}
+            <span className="bg-coral text-cream px-3 inline-block -rotate-1">subscribers.</span>
+          </h2>
 
-        <div className="mt-12">
-          <div className="rounded-3xl border-2 border-ink bg-cream p-8 pop-shadow-sm max-w-3xl">
+          <div className="rounded-3xl border-2 border-ink bg-cream p-8 pop-shadow-sm">
             <p className="text-lg md:text-xl text-ink/80 leading-relaxed">
               I spent two years at <strong>DXC Technology</strong> keeping global infrastructure reliable for enterprise clients. Then I followed the data — into Marketing Cloud, where the same systems thinking unlocks customer engagement instead of server uptime.
             </p>
