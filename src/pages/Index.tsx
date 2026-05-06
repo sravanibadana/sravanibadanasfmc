@@ -23,7 +23,7 @@ export default function Index() {
         {/* Mesh gradient base */}
         <div className="absolute inset-0 mesh-hero pointer-events-none" />
         {/* Soft blobs */}
-        <div className="absolute -top-32 -right-24 w-[28rem] h-[28rem] bg-lime/40 blur-3xl animate-blob animate-float pointer-events-none" />
+        <div className="absolute -top-32 -right-24 w-[28rem] h-[28rem] bg-sun/50 blur-3xl animate-blob animate-float pointer-events-none" />
         <div className="absolute -bottom-24 -left-24 w-[26rem] h-[26rem] bg-coral/30 blur-3xl animate-blob pointer-events-none" style={{ animationDelay: "2s" }} />
         <div className="absolute top-1/2 left-1/3 w-72 h-72 bg-cobalt/20 blur-3xl rounded-full pointer-events-none" />
         {/* Grain overlay for texture */}
@@ -48,7 +48,7 @@ export default function Index() {
                 <span className="relative z-10">data</span>
                 <span className="absolute inset-x-0 bottom-1 h-3 md:h-4 bg-lime -z-0" />
               </span> into{" "}
-              <span className="italic font-serif text-[hsl(0,90%,50%)] text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">journeys</span>
+              <span className="italic font-serif text-cobalt text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">journeys</span>
               <span className="block mt-1">that people <span className="underline decoration-cobalt decoration-[3px] underline-offset-4">actually</span> engage with.</span>
             </h1>
 
@@ -229,7 +229,7 @@ export default function Index() {
       <section className="container py-24">
         <span className="font-mono-display text-xs uppercase tracking-wider text-cobalt">// Off the clock</span>
         <h2 className="font-display font-black text-5xl md:text-7xl mt-3 tracking-tighter leading-[0.9]">
-          Beyond <span className="bg-lime px-2 inline-block -rotate-1">work.</span>
+          Beyond <span className="bg-sun px-2 inline-block -rotate-1">work.</span>
         </h2>
         <p className="mt-6 max-w-2xl text-lg text-ink/70">
           When I'm not building customer journeys, I spend time exploring creativity and ideas that shape how I think about people, behaviour, and storytelling.
@@ -238,7 +238,7 @@ export default function Index() {
         <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {[
             { icon: Palette, emoji: "🎨", title: "Painting", color: "bg-coral", text: "I enjoy painting as a way to slow down and focus on detail. It strengthens my visual thinking, which reflects in how I design clean, structured, and engaging email experiences." },
-            { icon: BookOpen, emoji: "✍️", title: "Journaling", color: "bg-lime", text: "Journaling helps me organise my thoughts and reflect on patterns, ideas, and experiences. It has improved how I think through problems, structure strategies, and communicate clearly — especially when planning customer journeys and campaign flows." },
+            { icon: BookOpen, emoji: "✍️", title: "Journaling", color: "bg-sun", text: "Journaling helps me organise my thoughts and reflect on patterns, ideas, and experiences. It has improved how I think through problems, structure strategies, and communicate clearly — especially when planning customer journeys and campaign flows." },
             { icon: Camera, emoji: "📸", title: "Photography", color: "bg-cobalt text-cream", text: "I enjoy capturing everyday moments and visual compositions through photography. It sharpens my eye for detail, layout, and storytelling, which influences how I approach visual hierarchy and design in emails." },
             { icon: Search, emoji: "🧠", title: "Research & Trend Exploration", color: "bg-lime", text: "I regularly analyse brand campaigns, funnels, and digital experiences to understand what drives engagement. This habit helps me continuously refine how I approach segmentation, messaging, and lifecycle marketing." },
             { icon: Video, emoji: "🎥", title: "Content Creation", color: "bg-coral", text: "I create content around marketing, storytelling, and consumer behaviour. It allows me to break down complex ideas into simple, engaging narratives — something I apply when designing campaigns and customer experiences." },
