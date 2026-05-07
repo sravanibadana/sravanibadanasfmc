@@ -53,6 +53,7 @@ export const projects: Project[] = [
     shortDescription:
       "A 14-day onboarding journey designed in Salesforce Marketing Cloud to nurture new subscribers, personalise engagement, and increase first-time customer conversion through behaviour-based automation.",
     tools: ["Journey Builder", "Email Studio", "AMPscript", "Automation Studio", "Data Extensions", "Contact Builder"],
+    image: "/src/assets/welcome-onboarding-journey.png",
     overview:
       "Designed and built a multi-step onboarding journey for a retail brand scenario focused on converting newly subscribed users into first-time customers within the first 14 days after signup. The journey used behavioural decisioning, personalised messaging, and automated exit logic to create a more relevant onboarding experience while reducing unnecessary communication.",
     problem:
