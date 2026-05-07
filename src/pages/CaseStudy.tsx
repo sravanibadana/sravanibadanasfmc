@@ -1,6 +1,11 @@
 import { Link, useParams, Navigate } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Target, AlertTriangle, Wrench, Database, Workflow, GitBranch, Sparkles, BarChart3, Lightbulb, RefreshCw } from "lucide-react";
 import { projects } from "@/data/projects";
+import welcomeOnboardingImg from "@/assets/welcome-onboarding-journey.png";
+
+const projectImages: Record<string, string> = {
+  "welcome-onboarding-journey": welcomeOnboardingImg,
+};
 
 const Section = ({ icon: Icon, title, children, color = "bg-cream" }: any) => (
   <section className={`rounded-2xl border-2 border-ink p-6 md:p-8 pop-shadow-sm ${color}`}>
@@ -23,6 +28,7 @@ export default function CaseStudy() {
   const next = projects[(idx + 1) % projects.length];
 
   const accentBg = project.accent === "lime" ? "bg-lime" : project.accent === "coral" ? "bg-coral" : "bg-cobalt text-cream";
+  const heroImage = projectImages[project.slug];
 
   return (
     <>
@@ -49,6 +55,15 @@ export default function CaseStudy() {
           <Section icon={Lightbulb} title="Overview">
             <p>{project.overview}</p>
           </Section>
+
+          {heroImage && (
+            <figure className="rounded-2xl border-2 border-ink overflow-hidden bg-cream pop-shadow-sm">
+              <img src={heroImage} alt={`${project.title} journey diagram`} className="w-full h-auto block" loading="lazy" />
+              <figcaption className="px-4 py-3 text-xs font-mono-display text-ink/70 border-t-2 border-ink bg-cream">
+                Journey Builder canvas — Salesforce Marketing Cloud
+              </figcaption>
+            </figure>
+          )}
 
           <Section icon={AlertTriangle} title="Problem Statement" color="bg-coral/10">
             <p>{project.problem}</p>

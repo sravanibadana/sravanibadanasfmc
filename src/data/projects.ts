@@ -18,6 +18,7 @@ export interface Project {
   learnings: string[];
   improvements: string[];
   accent: "lime" | "coral" | "cobalt";
+  image?: string;
 }
 
 export const categories: Record<Category, { label: string; tagline: string; accent: string }> = {
