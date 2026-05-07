@@ -3,10 +3,10 @@ import { ArrowRight, Mail, Sparkles, Zap, Database, GitBranch, Workflow, BarChar
 import { projects, featuredSlugs, categories } from "@/data/projects";
 
 const skills = [
-  { name: "Marketing Cloud", level: 92, color: "bg-lime" },
+  { name: "Marketing Cloud", level: 92, color: "bg-sun" },
   { name: "Journey Builder", level: 90, color: "bg-coral" },
   { name: "SQL", level: 80, color: "bg-cobalt" },
-  { name: "AMPscript", level: 72, color: "bg-lime" },
+  { name: "AMPscript", level: 72, color: "bg-sun" },
   { name: "Data Cloud", level: 68, color: "bg-coral" },
   { name: "Email Studio", level: 90, color: "bg-cobalt" },
 ];
@@ -46,9 +46,9 @@ export default function Index() {
             <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.05] tracking-tight">
               Turning <span className="relative inline-block">
                 <span className="relative z-10">data</span>
-                <span className="absolute inset-x-0 bottom-1 h-3 md:h-4 bg-lime -z-0" />
+                <span className="absolute inset-x-0 bottom-1 h-3 md:h-4 bg-sun -z-0" />
               </span> into{" "}
-              <span className="italic font-serif text-cobalt text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">journeys</span>
+              <span className="italic font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl" style={{ color: "#ff5722" }}>journeys</span>
               <span className="block mt-1">that people <span className="underline decoration-cobalt decoration-[3px] underline-offset-4">actually</span> engage with.</span>
             </h1>
 
@@ -107,7 +107,7 @@ export default function Index() {
               I spent two years at <strong>DXC Technology</strong> keeping global infrastructure reliable for enterprise clients. Then I followed the data — into Marketing Cloud, where the same systems thinking unlocks customer engagement instead of server uptime.
             </p>
             <p className="mt-4 text-lg md:text-xl text-ink/80 leading-relaxed">
-              Today I build journeys, write SQL, and ship campaigns. Tomorrow, <span className="bg-lime px-1">Data Cloud</span>.
+              Today I build journeys, write SQL, and ship campaigns. Tomorrow, <span className="bg-sun px-1">Data Cloud</span>.
             </p>
             <Link to="/about" className="mt-6 inline-flex items-center gap-2 font-semibold underline underline-offset-4 hover:text-coral transition-colors">
               Read the full story <ArrowRight className="w-4 h-4" />
@@ -118,20 +118,20 @@ export default function Index() {
 
       {/* SKILLS */}
       <section className="bg-ink text-cream border-y-2 border-ink py-24 relative overflow-hidden">
-        <div className="absolute -top-20 -right-20 w-80 h-80 bg-lime/20 animate-blob" />
+        <div className="absolute -top-20 -right-20 w-80 h-80 bg-sun/20 animate-blob" />
         <div className="absolute -bottom-32 -left-20 w-96 h-96 bg-coral/20 animate-blob" style={{ animationDelay: "3s" }} />
         <div className="container relative">
           <div className="flex items-end justify-between flex-wrap gap-4 mb-12">
             <div>
-              <span className="font-mono-display text-xs uppercase tracking-wider text-lime">// Stack</span>
-              <h2 className="font-display font-black text-5xl md:text-7xl mt-3 tracking-tighter">The <span className="text-lime">toolkit.</span></h2>
+              <span className="font-mono-display text-xs uppercase tracking-wider text-sun">// Stack</span>
+              <h2 className="font-display font-black text-5xl md:text-7xl mt-3 tracking-tighter">The <span className="text-sun">toolkit.</span></h2>
             </div>
             <p className="text-cream/60 max-w-md">Levels reflect production confidence, not certifications. I learn fast and ship faster.</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {skills.map((s) => (
-              <div key={s.name} className="bg-cream/5 backdrop-blur border-2 border-cream/20 rounded-2xl p-5 hover:border-lime transition-colors">
+              <div key={s.name} className="bg-cream/5 backdrop-blur border-2 border-cream/20 rounded-2xl p-5 hover:border-sun transition-colors">
                 <div className="flex justify-between items-baseline mb-3">
                   <span className="font-display font-bold text-lg">{s.name}</span>
                   <span className="font-mono-display text-sm text-cream/60">{s.level}%</span>
@@ -145,7 +145,7 @@ export default function Index() {
 
           <div className="mt-10 flex flex-wrap gap-2">
             {["Email Studio", "Journey Builder", "Automation Studio", "Contact Builder", "Content Builder", "Data Extensions", "AMPscript", "SSJS", "SQL", "REST API", "SOAP API", "HTML/CSS Email", "Google Analytics", "CM360", "GDPR", "CAN-SPAM"].map((t) => (
-              <span key={t} className="px-3 py-1.5 rounded-full bg-cream/5 border border-cream/20 text-sm font-medium hover:bg-lime hover:text-ink hover:border-lime transition-colors">{t}</span>
+              <span key={t} className="px-3 py-1.5 rounded-full bg-cream/5 border border-cream/20 text-sm font-medium hover:bg-sun hover:text-ink hover:border-sun transition-colors">{t}</span>
             ))}
           </div>
         </div>
@@ -160,7 +160,7 @@ export default function Index() {
 
         <div className="grid md:grid-cols-3 gap-6">
           {[
-            { key: "journeys", icon: GitBranch, color: "bg-lime" },
+            { key: "journeys", icon: GitBranch, color: "bg-sun" },
             { key: "automation", icon: Workflow, color: "bg-coral" },
             { key: "analytics", icon: BarChart3, color: "bg-cobalt text-cream" },
           ].map(({ key, icon: Icon, color }) => {
@@ -204,7 +204,7 @@ export default function Index() {
               to={`/projects/${p.slug}`}
               className="group flex flex-col rounded-2xl border-2 border-ink bg-cream overflow-hidden pop-shadow-sm hover:pop-shadow hover:-translate-y-1 transition-all"
             >
-              <div className={`h-40 ${i === 0 ? "bg-lime" : i === 1 ? "bg-coral" : "bg-cobalt"} border-b-2 border-ink relative overflow-hidden`}>
+              <div className={`h-40 ${i === 0 ? "bg-sun" : i === 1 ? "bg-coral" : "bg-cobalt"} border-b-2 border-ink relative overflow-hidden`}>
                 <div className="absolute inset-0 grain opacity-40" />
                 <div className="absolute bottom-3 left-4 font-mono-display text-xs uppercase tracking-wider">
                   Case 0{i + 1}
@@ -240,7 +240,7 @@ export default function Index() {
             { icon: Palette, emoji: "🎨", title: "Painting", color: "bg-coral", text: "I enjoy painting as a way to slow down and focus on detail. It strengthens my visual thinking, which reflects in how I design clean, structured, and engaging email experiences." },
             { icon: BookOpen, emoji: "✍️", title: "Journaling", color: "bg-sun", text: "Journaling helps me organise my thoughts and reflect on patterns, ideas, and experiences. It has improved how I think through problems, structure strategies, and communicate clearly — especially when planning customer journeys and campaign flows." },
             { icon: Camera, emoji: "📸", title: "Photography", color: "bg-cobalt text-cream", text: "I enjoy capturing everyday moments and visual compositions through photography. It sharpens my eye for detail, layout, and storytelling, which influences how I approach visual hierarchy and design in emails." },
-            { icon: Search, emoji: "🧠", title: "Research & Trend Exploration", color: "bg-lime", text: "I regularly analyse brand campaigns, funnels, and digital experiences to understand what drives engagement. This habit helps me continuously refine how I approach segmentation, messaging, and lifecycle marketing." },
+            { icon: Search, emoji: "🧠", title: "Research & Trend Exploration", color: "bg-sun", text: "I regularly analyse brand campaigns, funnels, and digital experiences to understand what drives engagement. This habit helps me continuously refine how I approach segmentation, messaging, and lifecycle marketing." },
             { icon: Video, emoji: "🎥", title: "Content Creation", color: "bg-coral", text: "I create content around marketing, storytelling, and consumer behaviour. It allows me to break down complex ideas into simple, engaging narratives — something I apply when designing campaigns and customer experiences." },
           ].map((h) => (
             <div key={h.title} className="rounded-3xl border-2 border-ink bg-cream p-6 pop-shadow-sm hover:-translate-y-1 hover:pop-shadow transition-all">
@@ -256,7 +256,7 @@ export default function Index() {
 
       {/* CTA */}
       <section className="container pb-24">
-        <div className="rounded-3xl border-2 border-ink bg-lime p-10 md:p-16 pop-shadow relative overflow-hidden">
+        <div className="rounded-3xl border-2 border-ink bg-sun p-10 md:p-16 pop-shadow relative overflow-hidden">
           <div className="absolute -bottom-20 -right-10 w-64 h-64 bg-coral rounded-full opacity-60 animate-blob" />
           <div className="relative max-w-2xl">
             <Zap className="w-10 h-10 mb-4" />
