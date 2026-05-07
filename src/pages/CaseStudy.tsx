@@ -2,9 +2,11 @@ import { Link, useParams, Navigate } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Target, AlertTriangle, Wrench, Database, Workflow, GitBranch, Sparkles, BarChart3, Lightbulb, RefreshCw } from "lucide-react";
 import { projects } from "@/data/projects";
 import welcomeOnboardingImg from "@/assets/welcome-onboarding-journey.png";
+import winbackSunsetImg from "@/assets/winback-sunset-journey.png";
 
 const projectImages: Record<string, string> = {
   "welcome-onboarding-journey": welcomeOnboardingImg,
+  "winback-reengagement": winbackSunsetImg,
 };
 
 const Section = ({ icon: Icon, title, children, color = "bg-cream" }: any) => (
