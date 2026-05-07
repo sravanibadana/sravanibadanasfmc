@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Sticky-note palette: warm off-white base, near-black ink, lime + pink-red + sun accents */
+    /* Sticky-note palette: warm off-white base, near-black ink, yellow + pink-red + sun accents */
     --background: 39 100% 97%;
     --foreground: 0 0% 7%;
 
@@ -40,7 +40,7 @@ All colors MUST be HSL.
     --radius: 1rem;
 
     /* Brand accents */
-    --lime: 73 88% 58%;        /* #c8f135 */
+    --lime: 41 100% 70%;        /* #ffd166 */
     --coral: 339 65% 70%;      /* softer pink */
     --cobalt: 209 84% 24%;     /* #0a4070 dark blue */
     --sun: 41 100% 70%;        /* #ffd166 */
